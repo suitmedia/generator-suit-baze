@@ -1,4 +1,4 @@
-# [Suit-baze](https://github.com/ImBobby/suit-baze) generator
+# [Suit-baze](https://github.com/suitmedia/suit-baze) generator
 
 
 > a Yeoman generator to generate boilerplate with built-in most-used plugins
