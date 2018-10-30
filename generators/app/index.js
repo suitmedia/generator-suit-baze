@@ -18,7 +18,7 @@ const pwd = process.env.PWD || process.cwd()
 const paths = {
     js: './dev/js/vendor/',
     scss: './dev/sass/plugin/',
-    font: './dev/fonts/'
+    font: './dev/webfonts/'
 }
 
 const msgs = {
