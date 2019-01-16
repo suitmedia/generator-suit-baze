@@ -1,5 +1,15 @@
 [
     {
+        "name": "owl-carousel",
+        "registryName": "owl-carousel",
+        "version": "~2.3.4",
+        "assets": [
+            "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+        ],
+        "url": "github.com/OwlCarousel2/OwlCarousel2"
+    },
+    {
         "name": "slick-carousel",
         "registryName": "slick-carousel",
         "version": "~1.8.0",
