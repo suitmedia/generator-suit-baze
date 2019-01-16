@@ -175,12 +175,12 @@
     {
         "name": "select2",
         "registryName": "select2",
-        "version": "~4.0.3",
+        "version": "~4.0.5",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css"
         ],
-        "url": "https://github.com/select2/select2/tree/4.0.3"
+        "url": "https://github.com/select2/select2/tree/4.0.5"
     },
     {
         "name": "ramda",
