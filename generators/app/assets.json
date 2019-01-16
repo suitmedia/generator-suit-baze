@@ -2,10 +2,10 @@
     {
         "name": "slick-carousel",
         "registryName": "slick-carousel",
-        "version": "~1.6.0",
+        "version": "~1.8.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.css"
         ],
         "url": "github.com/kenwheeler/slick/"
     },
