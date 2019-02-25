@@ -148,6 +148,11 @@ module.exports = generators.Base.extend({
                 this.destinationPath('./.editorconfig')
             )
 
+            this.fs.copy(
+                this.templatePath('_gitlab-ci.yml'),
+                this.destinationPath('../.gitlab-ci.yml')
+            )
+
             fs.mkdirSync(`./_partials`)
             this.fs.write(`./_partials/head.php`, '')
             this.fs.write(`./_partials/header.php`, '')
