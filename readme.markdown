@@ -12,7 +12,7 @@ Make sure you have **[node](http://nodejs.org/download/)** and **[yeoman](http:/
 - Clone
 - Install generator by running:
 ```
-npm install generator-suit-baze -g
+npm link
 ```
 if it doesn't work, you might need `sudo` command
 
