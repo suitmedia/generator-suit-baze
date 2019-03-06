@@ -60,11 +60,11 @@
     {
         "name": "baze-validate",
         "registryName": "baze-validation",
-        "version": "~1.2.0",
+        "version": "~1.2.1",
         "assets": [
-            "https://raw.githubusercontent.com/ImBobby/Baze-Validation/1.2.0/baze.validate.js"
+            "https://raw.githubusercontent.com/rolexta/Baze-Validation/1.2.1/baze.validate.js"
         ],
-        "url": "github.com/ImBobby/Baze-Validation"
+        "url": "github.com/rolexta/Baze-Validation"
     },
     {
         "name": "sprintf",
