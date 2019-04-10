@@ -98,6 +98,10 @@
                         $value == '.sass-cache' ||
                         $value == 'bower_components' ||
                         $value == 'node_modules' ||
+                        $value == 'assets' ||
+                        $value == '_partials' ||
+                        $value == 'package-lock.json' ||
+                        $value == 'home.html' ||
                         $value == 'index.php' ) continue;
 
                     if ( is_dir($value) ) {
