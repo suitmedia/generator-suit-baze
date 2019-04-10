@@ -62,7 +62,7 @@ module.exports = class extends generators {
     }
 
     writing() {
-        if ( this.answers === 'exit' ) {
+        if ( this.answers.options === 'exit' ) {
             process.exit(1)
         }
 
