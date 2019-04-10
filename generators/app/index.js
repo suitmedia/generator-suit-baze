@@ -30,52 +30,44 @@ const msgs = {
 
 const pluginScssFile = `${pwd}/dev/sass/plugin/_plugin.scss`
 
-module.exports = generators.Base.extend({
-    initializing: {
-        checkUpdate() {
-            clear()
-            updateNotifier({pkg: pkg}).notify()
-        },
+module.exports = class extends generators {
+    initializing() {
+        // checkUpdate
+        clear()
+        updateNotifier({pkg: pkg}).notify()
 
-        showCurrentVersion() {
-            log(chalk.white.underline(`You are running ${pkg.name} version ${pkg.version}\n`))
-        },
+        // showCurrentVersion
+        log(chalk.white.underline(`You are running ${pkg.name} version ${pkg.version}\n`))
 
-        buildMenuList() {
-            this.choices = []
-            this.choices.push('boilerplate')
+        // buildMenuList
+        this.choices = []
+        this.choices.push('boilerplate')
 
-            plugins.forEach( (plugin, i) => {
-                this.choices.push(`${plugin.name} - ${chalk.underline(plugin.url)}`)
-            })
+        plugins.forEach( (plugin, i) => {
+            this.choices.push(`${plugin.name} - ${chalk.underline(plugin.url)}`)
+        })
 
-            this.choices.push(new inquirer.Separator())
-            this.choices.push('exit')
-            this.choices.push(new inquirer.Separator())
-        }
-    },
+        this.choices.push(new inquirer.Separator())
+        this.choices.push('exit')
+        this.choices.push(new inquirer.Separator())
+    }
 
-    prompting() {
-        let done = this.async()
-
-        this.prompt({
-            type: 'list',
-            name: 'options',
+    async prompting() {
+        this.answers = await this.prompt([{
+            type    : 'list',
+            name    : 'options',
             message: 'What can I do for you?',
             choices: this.choices
-        }, answers => {
-            this.answers = answers.options
-            done()
-        })
-    },
+        }])
+    }
 
-    write() {
+    writing() {
         if ( this.answers === 'exit' ) {
             process.exit(1)
         }
 
         const PACKAGE_FILE = this.destinationPath('./package.json')
-        let answer = this.answers
+        let answer = this.answers.options
         let choice = plugins.filter( plugin => plugin.name === answer.split(' - ')[0] )[0]
 
         if ( answer === 'boilerplate' ) {
@@ -107,25 +99,27 @@ module.exports = generators.Base.extend({
                     filetype = 'font'
 
                 if ( filetype !== 'scss' ) {
-                    new download()
-                        .get(asset)
-                        .dest(this.destinationPath(paths[filetype]))
-                        .run()
+                    download(asset, this.destinationPath(paths[filetype])).then(() => {
+                        // console.log('downloaded')
+                    })
                 } else {
                     let filename = helper.getFilename(asset)
+                    let pluginScssPath = `${pwd}/dev/sass/plugin/`
 
-                    new download()
-                        .get(asset)
-                        .rename(helper.getScssFileName(filename))
-                        .dest(this.destinationPath(paths[filetype]))
-                        .run()
+                    download(asset, this.destinationPath(paths[filetype])).then(() => {
 
-                    let content = fs.readFileSync(`${pluginScssFile}`, {
-                        encoding: 'utf8'
+                        let content = fs.readFileSync(`${pluginScssFile}`, {
+                            encoding: 'utf8'
+                        })
+                        content += `\n@import "${filename}";`
+                        // console.log(helper.getFilename(filename), filename)
+
+                        fs.writeFileSync(`${pluginScssFile}`, content)
+
+                        fs.rename(`${pluginScssPath}${filename}.css`, `${pluginScssPath}_${filename}.scss`, (err)=> {
+                            if (err) throw err
+                        })
                     })
-                    content += `\n@import "${helper.getFilename(filename)}";`
-
-                    fs.writeFileSync(`${pluginScssFile}`, content)
                 }
 
                 log(`${chalk.green(msgs.created)} ${paths[filetype]}`)
@@ -160,4 +154,4 @@ module.exports = generators.Base.extend({
             this.fs.write(`./_partials/scripts.php`, '')
         }
     }
-})
+}
