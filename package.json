@@ -1,6 +1,6 @@
 {
   "name": "generator-baze",
-  "version": "2.20.0",
+  "version": "2.20.1",
   "description": "a Yeoman generator to generate boilerplate with built-in most-used plugins",
   "main": "index.js",
   "repository": {
@@ -10,7 +10,7 @@
   "keywords": [
     "yeoman-generator"
   ],
-  "author": "ImBobby",
+  "author": "Suitmedia",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/suitmedia/generator-suit-baze/issues"
