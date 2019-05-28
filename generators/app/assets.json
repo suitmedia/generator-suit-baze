@@ -49,15 +49,6 @@
         "url": "github.com/cowboy/jquery-throttle-debounce"
     },
     {
-        "name": "handlebars",
-        "registryName": "handlebars",
-        "version": "~4.0.6",
-        "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"
-        ],
-        "url": "github.com/wycats/handlebars.js"
-    },
-    {
         "name": "baze-validate",
         "registryName": "baze-validation",
         "version": "~1.2.1",
