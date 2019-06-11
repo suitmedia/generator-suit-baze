@@ -46,7 +46,7 @@
   Plugin.prototype.init = function () {
     var userOpts = this.settings;
 
-    
+
     /**
      * Set novalidate attribute to prevent browser validation
      */
@@ -77,6 +77,8 @@
       var hasMsg  = field.next('.' + userOpts.classMsg),
           id      = getUID(),
           msgTxt  = field.attr('data-invalid'),
+          types   = field.attr('type'),
+          isCheck = types === 'checkbox' || types === 'radio',
           msg     = $(document.createElement('span'));
 
 
@@ -110,6 +112,10 @@
         .attr('id', id)
         .html( '<span>'+message+'</span>' )
         .insertAfter( field );
+
+      if ( isCheck ) {
+        msg.addClass('msg-input-check')
+      }
     };
 
 
@@ -148,6 +154,28 @@
       });
 
       return allIsWell;
+    };
+
+
+    var validateCheckedInput = function (fields) {
+        var allIsWell = true;
+
+        fields.each( function () {
+            var $field = $(this);
+
+            if ( this.hasAttribute('disabled') ) return;
+
+            if ( $field.is(':checked') ) {
+                $field.addClass( userOpts.classValid );
+            } else {
+                $field.addClass( userOpts.classInvalid );
+                addMessage( $field, userOpts.msgEmpty );
+
+                allIsWell = false;
+            }
+        });
+
+        return allIsWell;
     };
 
 
@@ -270,6 +298,9 @@
       clearAllMessages( $this );
 
       isOK = validateEmpty( fields );
+      checkValidationResult();
+
+      isOK = validateCheckedInput( fields );
       checkValidationResult();
 
       isOK = validateEmail( fields );
