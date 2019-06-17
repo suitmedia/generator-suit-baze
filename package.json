@@ -1,6 +1,6 @@
 {
   "name": "generator-baze",
-  "version": "2.20.7",
+  "version": "2.20.8",
   "description": "a Yeoman generator to generate boilerplate with built-in most-used plugins",
   "main": "index.js",
   "repository": {
