@@ -143,7 +143,7 @@ module.exports = class extends generators {
             )
 
             this.fs.copy(
-                this.templatePath('_gitlab-ci.yml'),
+                this.templatePath('_gitlab-ci'),
                 this.destinationPath('../.gitlab-ci.yml')
             )
 

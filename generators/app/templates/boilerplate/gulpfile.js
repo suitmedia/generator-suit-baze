@@ -12,6 +12,7 @@ const rUglify     = require('rollup-plugin-uglify')
 const plugins     = require('gulp-load-plugins')()
 const rollup      = require('rollup-stream')
 const source      = require('vinyl-source-stream')
+const emailBuild  = require('gulp-email-builder')
 
 const paths = {
     dev     : 'dev/',
@@ -28,7 +29,7 @@ const sassTask = (isMinified = false) => () => {
         overrideBrowserslist: ['last 2 versions']
     }
 
-    return gulp.src(`${paths.dev}sass/main.scss`)
+    return gulp.src(`${paths.dev}sass/*.scss`)
         .pipe(plugins.sass(options).on('error', plugins.sass.logError))
         .pipe(plugins.postcss([
             prefixer(autoprefixOpts),
@@ -167,6 +168,18 @@ gulp.task('fonts', () => {
 
 
 
+/* Task: Inline css email template
+--------------------------------------------------------------------------------- */
+
+gulp.task('email:build', () => {
+    return gulp.src('email_dev/*.html')
+        .pipe(emailBuild().build())
+        .pipe(gulp.dest('email_build/'))
+})
+
+
+
+
 /* Task: Watch HTLM and PHP files
 --------------------------------------------------------------------------------- */
 
@@ -245,6 +258,7 @@ gulp.task('production', gulp.series(
     'javascript:compile_and_minify',
     'javascript:minify_vendor_js',
     'image:compress',
+    'email:build',
     'fonts'
 ))
 

@@ -1,6 +1,6 @@
 {
   "name": "suit-baze",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "authors": [
     "Suitmedia"
   ],
@@ -35,6 +35,7 @@
     "rollup-stream": "^1.24.1",
     "vinyl-source-stream": "^2.0.0",
     "gulpsmith": "^0.6.0",
-    "metalsmith": "^2.3.0"
+    "metalsmith": "^2.3.0",
+    "gulp-email-builder": "^3.0.0"
   }
 }
