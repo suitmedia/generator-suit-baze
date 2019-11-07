@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#FFFFFF">
+    <link rel="manifest" href="manifest.json">
 
     <meta property="og:url" content="">
     <meta property="og:title" content="">
@@ -57,5 +58,19 @@
     <script src="assets/js/vendor/sprintf.min.js" defer></script>
     <script src="assets/js/vendor/baze.validate.min.js" defer></script>
     <script src="assets/js/main.min.js" defer></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('baze-sw.js')
+                .then(reg => {
+                    console.log('😎', reg);
+                })
+                .catch(err => {
+                    console.log('😥', err);
+                })
+            });
+        }
+    </script>
 </body>
 </html>
