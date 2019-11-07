@@ -1,0 +1,95 @@
+/*! [PROJECT_NAME] | Suitmedia */
+@import "partial/normalize";
+@import "partial/variables";
+@import "partial/resets";
+
+html {
+    font: 400 $base_font_size $base_font_family;
+    line-height: $base_line_height;
+}
+
+body {
+    text-decoration-skip: ink;
+    color: $black70;
+}
+
+a {
+	color: $link;
+	text-decoration: none;
+
+	&:hover,
+    &:focus {
+		color: $link_hover;
+	}
+}
+
+button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.h1 {
+    font-size: 2.48832em;
+    line-height: 0.96451em;
+    margin: 0 0 0.40188em 0;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin: 0 0 1em 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media #{$medium} {
+        width: 94%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+$gaps: 0, 2, 4, 8, 12, 16, 20, 24, 32, 36;
+
+@each $gap in $gaps {
+    .p-#{$gap} { padding: $gap * 1px !important; }
+}
+
+// Header
+// ------------------------------------------------------------------------ //
+
+// Page styles
+// ------------------------------------------------------------------------ //
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: center;
+}
+
+// Banner Prompt
+// ------------------------------------------------------------------------ //
+.banner-install {
+    position: fixed;
+    z-index: 9999;
+    top: 100%;
+    left: 50%;
+    background: #FFF;
+    border-radius: 8px;
+    transform: translate(-50%, 0);
+    transition: transform .4s ease;
+
+    &.is-active {
+
+    box-shadow: $shadow;
+        transform: translate(-50%, -110%);
+    }
+}
