@@ -175,6 +175,7 @@ gulp.task('email:build', () => {
     return gulp.src('email_dev/*.html')
         .pipe(emailBuild().build())
         .pipe(gulp.dest('email_build/'))
+        .pipe(plugins.livereload())
 })
 
 
@@ -215,6 +216,7 @@ gulp.task('default', gulp.series(
     'javascript:copy_vendor_js',
     'image:compress',
     'fonts',
+    'email:build',
     'watch:htmlPHP'
 ))
 
@@ -248,6 +250,11 @@ gulp.task('stream', () => {
 
 gulp.task('watch', gulp.series('default', 'stream'))
 
+gulp.task('watch:email_build', () => {
+    plugins.livereload.listen()
+
+    gulp.watch(`email_dev/*.html`, gulp.series('email:build'))
+})
 
 /* Task: Build
 --------------------------------------------------------------------------------- */
