@@ -1,4 +1,4 @@
-/*! Baze Validation v1.2.4 | (c) @_bobbylie | http://git.io/bxW4 */
+/*! Baze Validation v1.2.5 | (c) @_bobbylie | http://git.io/bxW4 */
 
 ;(function ( $, window, document, undefined ) {
 
@@ -353,6 +353,23 @@
      * Attach validateFields on form submit
      */
     this.$element.on('submit', validateFields);
+
+    this.$element.on('blur', '[required]', function() {
+      var $this = $(this),
+          forms = $this.closest('form'),
+          isValid = $this.is(':valid')
+
+      // console.log(isValid)
+      $this.addClass('blured');
+      validateEmpty($this);
+      validateEmail($this);
+      validateNumeric($this);
+
+      // console.log(userOpts.classMsg)
+      if(isValid == true) {
+        $this.next('.'+userOpts.classMsg).remove()
+      }
+    });
 
 
     /**
