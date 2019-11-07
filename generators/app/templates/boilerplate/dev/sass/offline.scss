@@ -9,7 +9,8 @@ html {
 }
 
 body {
-    text-decoration-skip: ink;
+    // text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
     color: $black70;
 }
 

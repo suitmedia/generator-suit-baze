@@ -3,7 +3,7 @@ const paths             = 'http://localhost/project-folder/_frontend'
 const offlinePageUrl    = `${paths}/offline.html`
 const precacheResources = [
     offlinePageUrl,
-    `${paths}/assets/css/main.css`,
+    `${paths}/assets/css/offline.css`,
     `${paths}/assets/img/site-logo.png`
 ];
 

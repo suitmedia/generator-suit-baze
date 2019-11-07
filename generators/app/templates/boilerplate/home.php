@@ -51,6 +51,14 @@
         </div>
     </div>
 
+    <section id="installBanner" class="p-16 banner-install">
+        <h5>Install Baze App?</h5>
+        <div class="flex">
+            <button id="skipInstallBtn" class="btn mr-8">Next time</button>
+            <button id="installBtn" class="btn--primary">Install app</button>
+        </div>
+    </section>
+
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,promise,fetch" defer></script>
     <script src="assets/js/vendor/modernizr.min.js" defer></script>
     <script src="assets/js/vendor/jquery.min.js" defer></script>

@@ -96,3 +96,22 @@ button {
 
 // 5 Footer
 // ------------------------------------------------------------------------ //
+
+// 6 Banner Prompt
+// ------------------------------------------------------------------------ //
+.banner-install {
+    position: fixed;
+    z-index: 9999;
+    top: 100%;
+    left: 50%;
+    background: #FFF;
+    border-radius: 8px;
+    transform: translate(-50%, 0);
+    transition: transform .4s ease;
+
+    &.is-active {
+
+    box-shadow: $shadow;
+        transform: translate(-50%, -110%);
+    }
+}
