@@ -244,6 +244,7 @@ gulp.task('stream', () => {
     // Copy CSS
     gulp.watch(`${paths.dev}css/*`, gulp.series('stylesheet:copy_vendor_css'))
 
+    // watch html
     gulp.watch(['*.html', '*.php', '**/*.php'], gulp.series('watch:htmlPHP'))
 })
 
@@ -253,6 +254,10 @@ gulp.task('watch', gulp.series('default', 'stream'))
 gulp.task('watch:email_build', () => {
     plugins.livereload.listen()
 
+    // SASS
+    gulp.watch(`${paths.dev}sass/**/*.scss`, gulp.series('stylesheet:compile'))
+
+    // Compile email template
     gulp.watch(`email_dev/*.html`, gulp.series('email:build'))
 })
 
