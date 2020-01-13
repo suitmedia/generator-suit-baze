@@ -42,6 +42,7 @@ module.exports = class extends generators {
         // buildMenuList
         this.choices = []
         this.choices.push('boilerplate')
+        this.choices.push('modernizr')
 
         plugins.forEach( (plugin, i) => {
             this.choices.push(`${plugin.name} - ${chalk.underline(plugin.url)}`)
@@ -78,6 +79,14 @@ module.exports = class extends generators {
             } catch (e) {
                 boilerplate.bind(this)()
             }
+        } else if (answer === 'modernizr') {
+            try {
+                fs.openSync(PACKAGE_FILE, 'r')
+            } catch(e) {
+                log(msgs.installFirst)
+                process.exit(1)
+            }
+            addModernizr.bind(this)()
         } else {
             try {
                 fs.openSync(PACKAGE_FILE, 'r')
@@ -124,6 +133,13 @@ module.exports = class extends generators {
 
                 log(`${chalk.green(msgs.created)} ${paths[filetype]}`)
             })
+        }
+
+        function addModernizr() {
+            this.fs.copy(
+                this.templatePath('_modernizr'),
+                this.destinationPath('./dev/js/vendor/modernizr.js')
+            )
         }
 
         function boilerplate() {
