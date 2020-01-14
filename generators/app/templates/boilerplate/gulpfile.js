@@ -12,7 +12,7 @@ const rUglify     = require('rollup-plugin-uglify')
 const plugins     = require('gulp-load-plugins')()
 const rollup      = require('rollup-stream')
 const source      = require('vinyl-source-stream')
-const emailBuild  = require('gulp-email-builder')
+const emailBuild  = require('gulp-inline-css')
 
 const paths = {
     dev     : 'dev/',
@@ -171,9 +171,17 @@ gulp.task('fonts', () => {
 /* Task: Inline css email template
 --------------------------------------------------------------------------------- */
 
+// gulp.task('email:build', () => {
+//     return gulp.src('email_dev/*.html')
+//         .pipe(emailBuild().build())
+//         .pipe(gulp.dest('email_build/'))
+//         .pipe(plugins.livereload())
+// })
 gulp.task('email:build', () => {
     return gulp.src('email_dev/*.html')
-        .pipe(emailBuild().build())
+        .pipe(emailBuild({
+            removeLinkTags: true
+        }))
         .pipe(gulp.dest('email_build/'))
         .pipe(plugins.livereload())
 })
