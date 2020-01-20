@@ -31,13 +31,13 @@
         "url": "github.com/kenwheeler/slick/"
     },
     {
-        "name": "jquery-unveil",
-        "registryName": "jquery-unveil",
-        "version": "unveil#~1.3.0",
+        "name": "lazysizes",
+        "registryName": "lazysizes",
+        "version": "~5.2.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"
         ],
-        "url": "github.com/luis-almeida/unveil"
+        "url": "https://github.com/aFarkas/lazysizes"
     },
     {
         "name": "jquery-throttle-debounce",
@@ -115,33 +115,33 @@
     {
         "name": "font-awesome",
         "registryName": "font-awesome",
-        "version": "fontawesome#~5.8.2",
+        "version": "fontawesome#~5.12.0",
         "assets": [
-            "https://use.fontawesome.com/releases/v5.8.2/css/all.css",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.eot",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.woff2",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.woff",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.ttf",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-brands-400.svg",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.eot",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.woff2",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.woff",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.ttf",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-regular-400.svg",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.eot",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.woff2",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.woff",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.ttf",
-            "https://use.fontawesome.com/releases/v5.8.2/webfonts/fa-solid-900.svg"
+            "https://use.fontawesome.com/releases/v5.12.0/css/all.css",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-brands-400.eot",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-brands-400.woff2",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-brands-400.woff",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-brands-400.ttf",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-brands-400.svg",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-regular-400.eot",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-regular-400.woff2",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-regular-400.woff",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-regular-400.ttf",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-regular-400.svg",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-solid-900.eot",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-solid-900.woff2",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-solid-900.woff",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-solid-900.ttf",
+            "https://use.fontawesome.com/releases/v5.12.0/webfonts/fa-solid-900.svg"
         ],
         "url": "github.com/FortAwesome/Font-Awesome/"
     },
     {
         "name": "headroom",
         "registryName": "headroom.js",
-        "version": "~0.9.3",
+        "version": "~0.11.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.js"
         ],
         "url": "github.com/WickyNilliams/headroom.js"
     },
