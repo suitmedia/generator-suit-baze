@@ -10,15 +10,14 @@
         "url": "github.com/vuejs/vue"
     },
     {
-        "name": "owl-carousel",
-        "registryName": "owl-carousel",
-        "version": "~2.3.4",
+        "name": "tiny-slider",
+        "registryName": "tiny-slider",
+        "version": "~2.9.2",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css",
-            "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css"
         ],
-        "url": "github.com/OwlCarousel2/OwlCarousel2"
+        "url": "https://github.com/ganlanyuan/tiny-slider"
     },
     {
         "name": "slick-carousel",
@@ -40,15 +39,6 @@
         "url": "https://github.com/aFarkas/lazysizes"
     },
     {
-        "name": "jquery-throttle-debounce",
-        "registryName": "jquery-throttle-debounce",
-        "version": "*",
-        "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.js"
-        ],
-        "url": "github.com/cowboy/jquery-throttle-debounce"
-    },
-    {
         "name": "baze-validate",
         "registryName": "baze-validation",
         "version": "~1.2.4",
@@ -67,50 +57,41 @@
         "url": "github.com/alexei/sprintf.js"
     },
     {
-        "name": "fitvids",
-        "registryName": "jquery.fitvids",
-        "version": "fitvids#~1.1.0",
-        "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.js"
-        ],
-        "url": "github.com/davatron5000/FitVids.js"
-    },
-    {
         "name": "masonry",
         "registryName": "masonry",
-        "version": "~3.3.2",
+        "version": "~4.2.2",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.js"
         ],
         "url": "github.com/desandro/masonry"
     },
     {
         "name": "images-loaded",
         "registryName": "imagesloaded",
-        "version": "~3.2.0",
+        "version": "~4.1.4",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.js"
         ],
         "url": "github.com/desandro/imagesloaded"
     },
     {
         "name": "perfect-scrollbar",
         "registryName": "perfect-scrollbar",
-        "version": "~0.6.15",
+        "version": "~1.5.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.15/js/perfect-scrollbar.jquery.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.15/css/perfect-scrollbar.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/css/perfect-scrollbar.css"
         ],
-        "url": "github.com/noraesae/perfect-scrollbar"
+        "url": "https://github.com/mdbootstrap/perfect-scrollbar"
     },
     {
         "name": "vanilla-masker",
         "registryName": "vanilla-masker",
-        "version": "~1.1.0",
+        "version": "~1.2.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.1.0/vanilla-masker.min.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/vanilla-masker/1.2.0/vanilla-masker.min.js"
         ],
-        "url": "github.com/BankFacil/vanilla-masker"
+        "url": "https://github.com/vanilla-masker/vanilla-masker"
     },
     {
         "name": "font-awesome",
@@ -157,10 +138,10 @@
     {
         "name": "moment",
         "registryName": "moment",
-        "version": "~2.17.1",
+        "version": "~2.24.0",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/id.js"
+            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/id.js"
         ],
         "url": "github.com/moment/moment"
     },
@@ -176,23 +157,23 @@
     {
         "name": "fullpage.js",
         "registryName": "fullpage.js",
-        "version": "~2.8.9",
+        "version": "~2.9.7",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/vendors/scrolloverflow.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.9/jquery.fullPage.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullPage.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullPage.css"
         ],
-        "url": "https://github.com/alvarotrigo/fullPage.js.git"
+        "url": "https://github.com/alvarotrigo/fullPage.js/tree/2.9.7"
     },
     {
         "name": "select2",
         "registryName": "select2",
-        "version": "~4.0.5",
+        "version": "~4.0.12",
         "assets": [
-            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js",
-            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css"
+            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/js/select2.js",
+            "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.12/css/select2.css"
         ],
-        "url": "https://github.com/select2/select2/tree/4.0.5"
+        "url": "https://github.com/select2/select2/tree/4.0.12"
     },
     {
         "name": "ramda",
