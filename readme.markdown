@@ -22,4 +22,4 @@ Running
 yo baze
 ```
 will give you options what do you want to install
-![](http://oi66.tinypic.com/2r3ecfs.jpg)
+![](https://raw.githubusercontent.com/suitmedia/generator-suit-baze/master/generators/app/templates/terminal-baze.png)
